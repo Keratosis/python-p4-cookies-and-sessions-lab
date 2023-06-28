@@ -35,6 +35,7 @@ def show_article(id):
 
     if session['page_views'] <= 3:
         article = Article.query.get(id)
+        
         if article:
             return jsonify(article.to_dict())
         else:
